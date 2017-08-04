@@ -8,27 +8,33 @@
 
 @using (Html.BeginForm())
 {
-    <div class="form-group">
-        @Html.LabelFor(model => model.Name)
-        @Html.TextBoxFor(model => model.Name)
-    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Name)
+                @Html.TextBoxFor(model => model.Name)
+            </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.Price)
-        @Html.TextBoxFor(model => model.Price)
-    </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Price)
+                @Html.TextBoxFor(model => model.Price)
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.Label("Country of origin")
+                @Html.TextBoxFor(model => model.OriginCountry)
+            </div>
 
-    <div class="form-group">
-        @Html.Label("Country of origin")
-        @Html.TextBoxFor(model => model.OriginCountry)
+            <div class="form-group">
+                @Html.LabelFor(model => model.Image)
+                @Html.TextBoxFor(model => model.Image)
+            </div>
+        </div>
     </div>
+   
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.Image)
-        @Html.TextBoxFor(model => model.Image)
-    </div>
-
-    <input type="submit" value="Add Product" class="btn btn-default" />
+    
+    <input type="submit" value="Add Product" class="btn btn-lg black-btn btn-default" />
 }
 
-@Html.ActionLink("Return to products", "Index")
