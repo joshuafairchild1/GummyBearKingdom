@@ -4,18 +4,29 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<p>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</p>
-<p>@Html.DisplayNameFor(model => model.Price): $@Html.DisplayFor(model => model.Price)</p>
-<p>Country of origin: @Html.DisplayFor(model => model.OriginCountry)</p>
-<div class="candy-card">
-    <img class="candy-img" src="@Html.DisplayFor(model => model.Image)"/>
+<p class="candy-return">
+    @Html.ActionLink("← BACK TO CANDY", "Index")
+</p>
+
+<div class="row">
+    <div class="col-sm-6">
+        <img class="candy-img candy-detail-img" src="@Html.DisplayFor(model => model.Image)" />
+    </div>
+    <div class="col-sm-6">
+        <h3>@Html.DisplayFor(model => model.Name)</h3>
+
+        <div class="candy-details">
+            <p>$@Html.DisplayFor(model => model.Price)</p>
+            <p>Country of origin: @Html.DisplayFor(model => model.OriginCountry)</p>
+        </div>
+
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ProductId }, new { @class = "btn btn-lg edit-btn btn-default" })
+        </p>
+
+        <p>
+            @Html.ActionLink("Delete", "Delete", new { id = Model.ProductId }, new { @class = "btn btn-lg delete-btn"})
+        </p>
+    </div>
 </div>
 
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductId })
-</p>
-<p>
-    @Html.ActionLink("Delete", "Delete", new { id = Model.ProductId })
-</p>
-
-@Html.ActionLink("Return to products", "Index")

@@ -18,8 +18,8 @@
     color: #EDECE0;
 }
 
-.nav-links p:nth-child(2) {
-    margin-top: 20px;
+.nav-links p {
+    margin-bottom: 20px;
 }
 
 .title {
@@ -30,10 +30,6 @@
     margin-bottom: 130px;
     border: solid 1px black;
     text-align: center;
-}
-
-.gummybears {
-    margin-left: 60px;
 }
 
 .candy-container {
@@ -58,7 +54,7 @@
     font-size: 15px;
 }
 
-.candy-card:hover {
+.candy-card:hover, .candy-return:hover {
    opacity: 0.4;
 }
 
@@ -67,4 +63,33 @@
     max-width: 100%;
     object-fit: contain;
     margin-bottom: 50px;
+}
+
+.btn {
+    border-radius: 3px;
+    width: 130px;
+}
+
+.delete-btn {
+    background-color: black;
+    color: white;
+}
+
+.delete-btn:hover {
+    opacity: 0.4;
+    color: white;
+}
+
+.candy-return {
+    color: black;
+    font-family: open sans;
+    font-size: 16px;
+}
+
+.candy-detail-img {
+    margin-top: 60px;
+}
+
+.candy-details {
+    font-size: 16px;
 }
