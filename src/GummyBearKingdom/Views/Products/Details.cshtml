@@ -8,4 +8,11 @@
 <p>@Html.DisplayNameFor(model => model.Price): $@Html.DisplayFor(model => model.Price)</p>
 <p>Country of origin: @Html.DisplayFor(model => model.OriginCountry)</p>
 
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductId })
+</p>
+<p>
+    @Html.ActionLink("Delete", "Delete", new { id = Model.ProductId })
+</p>
+
 @Html.ActionLink("Return to products", "Index")

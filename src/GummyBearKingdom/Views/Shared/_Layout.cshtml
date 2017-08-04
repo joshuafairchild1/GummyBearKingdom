@@ -2,32 +2,31 @@
 
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <meta name="viewport" content="width=device-width" />
     <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="~/css/styles.css" rel="stylesheet" type="text/css"/>
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                @*<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar">@Html.ActionLink("Products", "Index", "Products")</span>
-                    <span class="icon-bar">@Html.ActionLink("Add a Product", "Create", "Products")</span>
-                </button>*@
-                @Html.ActionLink("Gummy Bear Kingdom", "Index", "Home", new {id=""}, new {@class="navbar-brand"})
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 nav-links">
+                <p>@Html.ActionLink("PRODUCTS", "Index", "Products")</p>
+                <p>@Html.ActionLink("ADD A PRODUCT", "Create", "Products")</p>
+                <p>@Html.ActionLink("HOME", "Index", "Home")</p>
             </div>
-            <div>
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Products", "Index", "Products")</li>
-                    <li>@Html.ActionLink("Add a Product", "Create", "Products")</li>
-                </ul>
+            <div class="col-sm-8">
+                <div class="title">
+                    <h1>Welcome to Gummy Bear Kingdom</h1>
+                </div>
+
+                @RenderBody()
+            </div>
+            <div class="col-sm-2">
+                <img src="../../images/icons.png"/>
             </div>
         </div>
-    </div>
-    <div class="container main">
-        @RenderBody()
     </div>
 </body>
 </html>

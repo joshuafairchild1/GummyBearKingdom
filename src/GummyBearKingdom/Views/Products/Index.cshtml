@@ -4,16 +4,17 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>All products</h2>
-@foreach(var product in Model)
-{
-    <p>
-        <strong>@Html.DisplayFor(model => product.Name)</strong> |
-        @Html.ActionLink("Details", "Details", new { id = product.ProductId }) | 
-        @Html.ActionLink("Edit", "Edit", new { id = product.ProductId }) | 
-        @Html.ActionLink("Delete", "Delete", new { id = product.ProductId })
-    </p>
-}
+<div class="candy-container">
+    @foreach(var product in Model)
+    {
+        <div class="candy-card">
+            <p>
+                <strong>@Html.DisplayFor(model => product.Name)</strong> |
+                @Html.ActionLink("Details", "Details", new { id = product.ProductId })
+            </p>
+        </div>
+    }
+</div>
 
 <h4>@Html.ActionLink("Add a product", "Create")</h4>
 <h4>@Html.ActionLink("Return to home", "Index", "Home")</h4>
