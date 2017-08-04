@@ -1,0 +1,17 @@
+﻿@model IEnumerable<GummyBearKingdom.Models.Product>
+@{ 
+    ViewData["Title"] = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>All products</h2>
+@foreach(var product in Model)
+{
+    <div class="well">
+        <p>Product name: @Html.DisplayFor(model => product.Name)</p>
+        <p>Product price: $@Html.DisplayFor(model => product.Price)</p>
+        <p>Country of origin: @Html.DisplayFor(model => product.OriginCountry)</p>
+    </div>
+}
+
+<h4>@Html.ActionLink("Return to home", "Index", "Home")</h4>
