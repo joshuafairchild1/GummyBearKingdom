@@ -7,6 +7,9 @@
 <p>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</p>
 <p>@Html.DisplayNameFor(model => model.Price): $@Html.DisplayFor(model => model.Price)</p>
 <p>Country of origin: @Html.DisplayFor(model => model.OriginCountry)</p>
+<div class="candy-card">
+    <img class="candy-img" src="@Html.DisplayFor(model => model.Image)"/>
+</div>
 
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ProductId })

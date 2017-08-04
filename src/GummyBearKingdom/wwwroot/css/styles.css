@@ -27,7 +27,7 @@
     height: 240px;
     margin: 0 auto;
     margin-top: 40px;
-    margin-bottom: 110px;
+    margin-bottom: 130px;
     border: solid 1px black;
     text-align: center;
 }
@@ -44,7 +44,27 @@
 }
 
 .candy-card {
-    border: solid 1px black;
-    height: 150px;
-    width: 200px;
+    text-align: center;
+    height: 180px;
+    width: 230px;
+    margin-bottom: 60px;
+}
+.candy-card p {
+    text-decoration: none;
+    color: black;
+    font-family: open sans;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+.candy-card:hover {
+   opacity: 0.4;
+}
+
+.candy-img {
+    max-height: 80%;
+    max-width: 100%;
+    object-fit: contain;
+    margin-bottom: 50px;
 }

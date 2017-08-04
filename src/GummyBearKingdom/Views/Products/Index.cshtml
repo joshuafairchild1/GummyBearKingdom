@@ -7,14 +7,14 @@
 <div class="candy-container">
     @foreach(var product in Model)
     {
-        <div class="candy-card">
-            <p>
-                <strong>@Html.DisplayFor(model => product.Name)</strong> |
-                @Html.ActionLink("Details", "Details", new { id = product.ProductId })
-            </p>
-        </div>
+        <a href="/Products/Details/@Html.DisplayFor(model => product.ProductId)">
+            <div class="candy-card">
+                <img class="candy-img" src="@Html.DisplayFor(model => product.Image)" />
+                <p>
+                    @Html.DisplayFor(model => product.Name)
+                </p>
+            </div>
+        </a>
     }
 </div>
 
-<h4>@Html.ActionLink("Add a product", "Create")</h4>
-<h4>@Html.ActionLink("Return to home", "Index", "Home")</h4>
