@@ -1,0 +1,29 @@
+﻿@model GummyBearKingdom.Models.Product
+@{
+    ViewData["Title"] = "Add Product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add a product</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Price)
+        @Html.TextBoxFor(model => model.Price)
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Country of Origin")
+        @Html.TextBoxFor(model => model.OriginCountry)
+    </div>
+
+    <input type="submit" value="Add Product" class="btn btn-default" />
+}
+
+@Html.ActionLink("Return to products", "Index")
